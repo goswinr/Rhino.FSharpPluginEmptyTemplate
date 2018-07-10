@@ -3,8 +3,7 @@ F# Plugin Template in for Rhinoceros3D
 
 This is a translation of the C# Rhino template to F#
 
-tken from
-
+taken from
 https://marketplace.visualstudio.com/items?itemName=McNeel.RhinoCommontemplatesforv5
 
 see also
