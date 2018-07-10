@@ -5,7 +5,7 @@
 //open Rhino
 
 // the Plugin:
-type FsPlugin private () =  // with private constructor for singelton   
+type FsPlugin () =  // don't set constructor private  for singelton  
     inherit Rhino.PlugIns.PlugIn()
     
     // Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived
@@ -24,7 +24,7 @@ type FsPlugin private () =  // with private constructor for singelton
     
 
 // the Command(s):
-[<System.Runtime.InteropServices.Guid("ce66e7f8-7f27-476d-a30e-1540a04c25eb")>]
+[<System.Runtime.InteropServices.Guid("replace with guid string")>]
 type FsPluginCommand () = // calls for the command that starts sthe script editor
     inherit Rhino.Commands.Command()    
     static member val Instance = FsPluginCommand() // Singelton: http://stackoverflow.com/questions/2691565/how-to-implement-singleton-pattern-syntax
