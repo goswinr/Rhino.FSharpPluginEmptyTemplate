@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetExt>.rhp</TargetExt>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>    <!--to only have the english resources-->
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="8.0.200" GeneratePathProperty="true" />
+
+    <!-- During debugging use the current Rhinocommon dll reference to avoid the ~20 sec of compatibility check when Rhino loads it the first time. -->
+    <Reference Include="RhinoCommon" HintPath="C:\Program Files\Rhino 8\System\RhinoCommon.dll" Private="False" />
+    <!-- <PackageReference Include="RhinoCommon" Version="7.0.20314.3001" PrivateAssets="all" ExcludeAssets="runtime" /> -->
+
+    <Compile Include="main.fs" />
+  </ItemGroup>
+
+</Project>
